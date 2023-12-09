@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
     public void clicked(View view){
         btn = findViewById(R.id.button);
         counterClick +=1;
-
+        if (counterClick != 6) {
+            btn.setText("This is a click number:" + counterClick);
+        }
+        else{
+            btn.setText("Enough to click. Go to new start!");
+            counterClick=0;
+        }
     }
 }
